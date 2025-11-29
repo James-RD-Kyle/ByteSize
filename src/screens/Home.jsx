@@ -24,9 +24,6 @@ const Home = ({ navigation }) => {
           {/* Header with Logo */}
           <View className="bg-slate-900 py-5 px-4 items-center mb-5">
             <Logo size={150} />
-            
-            {/* Navigation */}
-            <Navigation navigation={navigation} activeTab="Home" />
           </View>
 
           {/* Main Content */}
@@ -51,6 +48,11 @@ const Home = ({ navigation }) => {
           </View>
         </View>
       </ScrollView>
+      
+      {/* Bottom Navigation */}
+      <View className="bg-slate-900 border-t pb-10 border-slate-700">
+        <Navigation navigation={navigation} activeTab="Home" />
+      </View>
     </SafeAreaView>
   );
 };
