@@ -10,6 +10,10 @@ import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 
 const Lessons = ({ navigation }) => {
+
+	const handleLessonSelect = (Lessons) => {}
+	}
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView className="flex-1">
@@ -42,7 +46,8 @@ const Lessons = ({ navigation }) => {
                 <Text className="text-xl font-bold text-slate-900 mb-2">Java</Text>
               </TouchableOpacity>
               
-              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg">
+              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg"
+			  					onPress={() => {navigation.navigate('CSharp')}}>
                 <Text className="text-xl font-bold text-slate-900 mb-2">C#</Text>
               </TouchableOpacity>
             </View>

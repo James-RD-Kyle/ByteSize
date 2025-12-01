@@ -15,6 +15,7 @@ import "./global.css"
 import Home from './src/screens/Home';
 import Lessons from './src/screens/Lessons';
 import Profile from './src/screens/Profile';
+import CSharp from './src/screens/CSharp';
 
 const Stack = createStackNavigator();
 
@@ -34,6 +35,7 @@ function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Lessons" component={Lessons} />
           <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="CSharp" component={CSharp} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
