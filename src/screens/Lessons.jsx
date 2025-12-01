@@ -11,9 +11,6 @@ import Logo from '../components/Logo';
 
 const Lessons = ({ navigation }) => {
 
-	const handleLessonSelect = (Lessons) => {}
-	}
-
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView className="flex-1">
@@ -65,7 +62,7 @@ const Lessons = ({ navigation }) => {
         <Navigation navigation={navigation} activeTab="Lessons" />
       </View>
     </SafeAreaView>
-  );
+  	);
 };
 
 export default Lessons;

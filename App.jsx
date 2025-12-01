@@ -15,7 +15,7 @@ import "./global.css"
 import Home from './src/screens/Home';
 import Lessons from './src/screens/Lessons';
 import Profile from './src/screens/Profile';
-import CSharp from './src/screens/CSharp';
+import CSharp from './src/screens/CSharp/CSharp';
 
 const Stack = createStackNavigator();
 
