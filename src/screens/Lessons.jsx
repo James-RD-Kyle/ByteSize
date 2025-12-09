@@ -5,137 +5,64 @@ import {
   TouchableOpacity,
   ScrollView,
   SafeAreaView,
-  StyleSheet,
 } from 'react-native';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 
 const Lessons = ({ navigation }) => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView 
-        style={styles.scrollView}
-        contentContainerStyle={styles.scrollContentContainer}
-      >
-        {/* Header with Logo */}
-        <View style={styles.header}>
-          <Logo size={150} />
-          
-          {/* Navigation */}
-          <Navigation navigation={navigation} activeTab="Lessons" />
-        </View>
 
-        {/* Main Content */}
-        <View style={styles.mainContent}>
-          <Text style={styles.title}>
-            Choose Your Lesson
-          </Text>
-          <Text style={styles.subtitle}>
-            Here you can find all the lessons available to you. Click on any lesson to start learning!
-          </Text>
-          
-          {/* Lesson Categories */}
-          <View style={styles.lessonsGrid}>
-            <TouchableOpacity style={styles.lessonCard}>
-              <Text style={styles.lessonTitle}>JavaScript</Text>
-            </TouchableOpacity>
+  return (
+    <SafeAreaView className="flex-1 bg-white">
+      <ScrollView className="flex-1">
+        <View className="min-h-screen">
+          {/* Header with Logo */}
+          <View className="bg-slate-900 py-5 px-4 items-center mb-5">
+            <Logo size={150} />
+          </View>
+
+          {/* Main Content */}
+          <View className="flex-1 px-5 py-5">
+            <Text className="text-3xl font-bold text-center mb-4 text-slate-900">
+              Choose Your Lesson
+            </Text>
+            <Text className="text-lg text-center mb-8 text-gray-600 leading-6">
+              Here you can find all the lessons available to you. Click on any lesson to start learning!
+            </Text>
             
-            <TouchableOpacity style={styles.lessonCard}>
-              <Text style={styles.lessonTitle}>Python</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.lessonCard}>
-              <Text style={styles.lessonTitle}>Java</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.lessonCard}>
-              <Text style={styles.lessonTitle}>C#</Text>
-            </TouchableOpacity>
+            {/* Lesson Categories */}
+            <View className="gap-4">
+              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg">
+                <Text className="text-xl font-bold text-slate-900 mb-2">JavaScript</Text>
+              </TouchableOpacity>
+              
+              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg">
+                <Text className="text-xl font-bold text-slate-900 mb-2">Python</Text>
+              </TouchableOpacity>
+              
+              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg">
+                <Text className="text-xl font-bold text-slate-900 mb-2">Java</Text>
+              </TouchableOpacity>
+              
+              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg"
+			  					onPress={() => {navigation.navigate('CSharp')}}>
+                <Text className="text-xl font-bold text-slate-900 mb-2">C#</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Footer */}
+          <View className="bg-gray-50 py-5 items-center">
+            <Text className="text-sm text-gray-600">© 2025 ByteSize. All rights reserved.</Text>
           </View>
         </View>
-
-        {/* Footer */}
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>© 2025 ByteSize. All rights reserved.</Text>
-        </View>
       </ScrollView>
+      
+      {/* Bottom Navigation */}
+      <View className="bg-slate-900 border-t pb-10 border-slate-700">
+        <Navigation navigation={navigation} activeTab="Lessons" />
+      </View>
     </SafeAreaView>
-  );
+  	);
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
-  scrollView: {
-    flex: 1,
-  },
-  scrollContentContainer: {
-    minHeight: '100%',
-  },
-  header: {
-    backgroundColor: '#0a0a23',
-    paddingVertical: 20,
-    paddingHorizontal: 16,
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  mainContent: {
-    flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 20,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 16,
-    color: '#0a0a23',
-  },
-  brandText: {
-    color: '#1d4ed8',
-  },
-  subtitle: {
-    fontSize: 18,
-    textAlign: 'center',
-    marginBottom: 32,
-    color: '#666666',
-    lineHeight: 24,
-  },
-  lessonsGrid: {
-    gap: 16,
-  },
-  lessonCard: {
-    backgroundColor: '#f8f9fa',
-    padding: 20,
-    borderRadius: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#1d4ed8',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  lessonTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#0a0a23',
-    marginBottom: 8,
-  },
-  footer: {
-    backgroundColor: '#f9f9f9',
-    paddingVertical: 20,
-    alignItems: 'center',
-  },
-  footerText: {
-    fontSize: 14,
-    color: '#666666',
-  },
-});
 
 export default Lessons;

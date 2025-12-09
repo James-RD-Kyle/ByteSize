@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   ScrollView,
   SafeAreaView,
-  StyleSheet,
 } from 'react-native';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
@@ -19,114 +18,43 @@ const Home = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView 
-        style={styles.scrollView}
-        contentContainerStyle={styles.scrollContentContainer}
-      >
-        {/* Header with Logo */}
-        <View style={styles.header}>
-          <Logo size={150} />
-          
-          {/* Navigation */}
-          <Navigation navigation={navigation} activeTab="Home" />
-        </View>
+    <SafeAreaView className="flex-1 bg-white">
+      <ScrollView className="flex-1">
+        <View className="min-h-screen">
+          {/* Header with Logo */}
+          <View className="bg-slate-900 py-5 px-4 items-center mb-5">
+            <Logo size={150} />
+          </View>
 
-        {/* Main Content */}
-        <View style={styles.mainContent}>
-          <Text style={styles.welcomeTitle}>
-            Welcome to <Text style={styles.brandText}>ByteSize</Text>
-          </Text>
-          <Text style={styles.subtitle}>
-            Master coding one byte at a time. Learn, practice, and track your progress!
-          </Text>
-          <TouchableOpacity 
-            style={styles.startButton}
-            onPress={handleStartLearning}
-          >
-            <Text style={styles.startButtonText}>Start Learning</Text>
-          </TouchableOpacity>
-        </View>
+          {/* Main Content */}
+          <View className="min-h-96 justify-center items-center px-5 py-10">
+            <Text className="text-3xl font-bold text-center mb-4 text-slate-900">
+              Welcome to <Text className="text-blue-600">ByteSize</Text>
+            </Text>
+            <Text className="text-lg text-center mb-8 text-gray-600 leading-6">
+              Master coding one byte at a time. Learn, practice, and track your progress!
+            </Text>
+            <TouchableOpacity 
+              className="bg-blue-600 px-8 py-4 rounded-xl shadow-lg"
+              onPress={handleStartLearning}
+            >
+              <Text className="text-white text-lg font-bold">Start Learning</Text>
+            </TouchableOpacity>
+          </View>
 
-        {/* Footer */}
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>© 2025 ByteSize. All rights reserved.</Text>
+          {/* Footer */}
+          <View className="bg-gray-50 py-5 items-center">
+            <Text className="text-sm text-gray-600">© 2025 ByteSize. All rights reserved.</Text>
+          </View>
         </View>
       </ScrollView>
+      
+      {/* Bottom Navigation */}
+      <View className="bg-slate-900 border-t pb-10 border-slate-700">
+        <Navigation navigation={navigation} activeTab="Home" />
+      </View>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
-  scrollView: {
-    flex: 1,
-  },
-  scrollContentContainer: {
-    minHeight: '100%',
-  },
-  header: {
-    backgroundColor: '#0a0a23',
-    paddingVertical: 20,
-    paddingHorizontal: 16,
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  mainContent: {
-    minHeight: 400,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 40,
-  },
-  welcomeTitle: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 16,
-    color: '#0a0a23',
-  },
-  brandText: {
-    color: '#1d4ed8',
-  },
-  subtitle: {
-    fontSize: 18,
-    textAlign: 'center',
-    marginBottom: 32,
-    color: '#666666',
-    lineHeight: 24,
-  },
-  startButton: {
-    backgroundColor: '#1d4ed8',
-    paddingHorizontal: 32,
-    paddingVertical: 16,
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  startButtonText: {
-    color: '#ffffff',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  footer: {
-    backgroundColor: '#f9f9f9',
-    paddingVertical: 20,
-    alignItems: 'center',
-  },
-  footerText: {
-    fontSize: 14,
-    color: '#666666',
-  },
-});
 
 export default Home;
