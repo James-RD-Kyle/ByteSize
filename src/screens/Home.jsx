@@ -4,12 +4,12 @@ import {
   Text,
   TouchableOpacity,
   ScrollView,
-  SafeAreaView,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 
-const Home = ({ navigation }) => {
+function Home({ navigation }) {
   const handleStartLearning = () => {
     // Navigate to Lessons screen
     if (navigation) {

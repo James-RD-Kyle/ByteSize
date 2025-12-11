@@ -5,7 +5,7 @@ import {
 	TouchableOpacity,
 } from 'react-native';
 
-const Navigation = ({ navigation, activeTab = 'Home' }) => {
+function Navigation({ navigation, activeTab = 'Home' }) {
 
 	const handleNavigateToProfile = () => {
 		// Navigate to Profile screen

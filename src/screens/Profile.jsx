@@ -2,14 +2,14 @@ import React from 'react';
 import {
   View,
   Text,
-  TouchableOpacity,
+  // TouchableOpacity,
   ScrollView,
-  SafeAreaView,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 
-const Profile = ({ navigation }) => {
+function Profile({ navigation }) {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView className="flex-1">

@@ -3,7 +3,7 @@ import {
   Image,
 } from 'react-native';
 
-const Logo = ({ size = 150, style = {} }) => {
+function Logo({ size = 150, style = {} }) {
   return (
     <Image
       source={require('../assets/images/ByteSizeLogoBlueWhite.png')}
