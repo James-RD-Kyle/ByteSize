@@ -5,14 +5,16 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
+import ComingSoon from '../components/ComingSoon';
 
-function Lessons({ navigation }) {
-
+const Lessons = ({ navigation }) => {
+  const insets = useSafeAreaInsets();
+  
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <View style={{ flex: 1, paddingTop: insets.top, paddingBottom: insets.bottom, backgroundColor: 'white' }}>
       <ScrollView className="flex-1">
         <View className="min-h-screen">
           {/* Header with Logo */}
@@ -31,21 +33,36 @@ function Lessons({ navigation }) {
             
             {/* Lesson Categories */}
             <View className="gap-4">
-              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg">
+              <TouchableOpacity 
+                className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-yellow-500 shadow-lg"
+                onPress={() => navigation.navigate('Javascript')}
+              >
                 <Text className="text-xl font-bold text-slate-900 mb-2">JavaScript</Text>
+                <Text className="text-sm text-gray-600">Learn modern JavaScript fundamentals</Text>
               </TouchableOpacity>
               
-              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg">
+              <TouchableOpacity 
+                className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-green-600 shadow-lg"
+                onPress={() => navigation.navigate('Python')}
+              >
                 <Text className="text-xl font-bold text-slate-900 mb-2">Python</Text>
+                <Text className="text-sm text-gray-600">Master Python programming basics</Text>
               </TouchableOpacity>
               
-              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg">
+              <TouchableOpacity 
+                className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-red-600 shadow-lg"
+                onPress={() => navigation.navigate('Java')}
+              >
                 <Text className="text-xl font-bold text-slate-900 mb-2">Java</Text>
+                <Text className="text-sm text-gray-600">Explore Java object-oriented programming</Text>
               </TouchableOpacity>
               
-              <TouchableOpacity className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg"
-			  					onPress={() => {navigation.navigate('CSharp')}}>
+              <TouchableOpacity 
+                className="bg-gray-50 p-5 rounded-xl border-l-4 border-l-blue-600 shadow-lg"
+                onPress={() => navigation.navigate('CSharp')}
+              >
                 <Text className="text-xl font-bold text-slate-900 mb-2">C#</Text>
+                <Text className="text-sm text-gray-600">Discover C# and .NET development</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -58,11 +75,9 @@ function Lessons({ navigation }) {
       </ScrollView>
       
       {/* Bottom Navigation */}
-      <View className="bg-slate-900 border-t pb-10 border-slate-700">
-        <Navigation navigation={navigation} activeTab="Lessons" />
-      </View>
-    </SafeAreaView>
-  	);
+      <Navigation navigation={navigation} activeTab="Lessons" />
+    </View>
+  );
 };
 
 export default Lessons;

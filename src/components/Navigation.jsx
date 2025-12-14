@@ -29,33 +29,35 @@ function Navigation({ navigation, activeTab = 'Home' }) {
 	};
 
 	return (
-		<View className="flex-row justify-center gap-2.5 mt-5">
-			<TouchableOpacity 
-				className={`px-4 py-2 rounded-xl ${activeTab === 'Home' ? 'bg-blue-600' : ''}`}
-				onPress={handleNavigateToHome}
-			>
-				<Text className={`text-white text-base ${activeTab === 'Home' ? 'font-bold' : 'font-medium'}`}>
-					Home
-				</Text>
-			</TouchableOpacity>
-			
-			<TouchableOpacity 
-				className={`px-4 py-2 rounded-xl ${activeTab === 'Lessons' ? 'bg-blue-600' : ''}`}
-				onPress={handleNavigateToLessons}
-			>
-				<Text className={`text-white text-base ${activeTab === 'Lessons' ? 'font-bold' : 'font-medium'}`}>
-					Lessons
-				</Text>
-			</TouchableOpacity>
-			
-			<TouchableOpacity 
-				className={`px-4 py-2 rounded-xl ${activeTab === 'Profile' ? 'bg-blue-600' : ''}`}
-				onPress={handleNavigateToProfile}
-			>
-				<Text className={`text-white text-base ${activeTab === 'Profile' ? 'font-bold' : 'font-medium'}`}>
-					Profile
-				</Text>
-			</TouchableOpacity>
+		<View className="bg-slate-900 border-t border-slate-700 pb-5">
+			<View className="flex-row justify-center gap-2.5 mt-5">
+				<TouchableOpacity 
+					className={`px-4 py-2 rounded-xl ${activeTab === 'Home' ? 'bg-blue-600' : ''}`}
+					onPress={handleNavigateToHome}
+				>
+					<Text className={`text-white text-base ${activeTab === 'Home' ? 'font-bold' : 'font-medium'}`}>
+						Home
+					</Text>
+				</TouchableOpacity>
+				
+				<TouchableOpacity 
+					className={`px-4 py-2 rounded-xl ${activeTab === 'Lessons' ? 'bg-blue-600' : ''}`}
+					onPress={handleNavigateToLessons}
+				>
+					<Text className={`text-white text-base ${activeTab === 'Lessons' ? 'font-bold' : 'font-medium'}`}>
+						Lessons
+					</Text>
+				</TouchableOpacity>
+				
+				<TouchableOpacity 
+					className={`px-4 py-2 rounded-xl ${activeTab === 'Profile' ? 'bg-blue-600' : ''}`}
+					onPress={handleNavigateToProfile}
+				>
+					<Text className={`text-white text-base ${activeTab === 'Profile' ? 'font-bold' : 'font-medium'}`}>
+						Profile
+					</Text>
+				</TouchableOpacity>
+			</View>
 		</View>
 	);
 };

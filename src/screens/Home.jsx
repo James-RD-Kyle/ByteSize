@@ -5,11 +5,13 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 
-function Home({ navigation }) {
+const Home = ({ navigation }) => {
+  const insets = useSafeAreaInsets();
+  
   const handleStartLearning = () => {
     // Navigate to Lessons screen
     if (navigation) {
@@ -18,7 +20,7 @@ function Home({ navigation }) {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <View style={{ flex: 1, paddingTop: insets.top, paddingBottom: insets.bottom, backgroundColor: 'white' }}>
       <ScrollView className="flex-1">
         <View className="min-h-screen">
           {/* Header with Logo */}
@@ -50,10 +52,8 @@ function Home({ navigation }) {
       </ScrollView>
       
       {/* Bottom Navigation */}
-      <View className="bg-slate-900 border-t pb-10 border-slate-700">
-        <Navigation navigation={navigation} activeTab="Home" />
-      </View>
-    </SafeAreaView>
+      <Navigation navigation={navigation} activeTab="Home" />
+    </View>
   );
 };
 
