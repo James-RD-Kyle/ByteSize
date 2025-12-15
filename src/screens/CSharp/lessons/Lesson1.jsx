@@ -32,14 +32,19 @@ const CSharpLesson1 = ({ navigation }) => {
 							C# Lesson 1
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							What Is C#? — A quick intro to the C# language
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="What Is C#?"
+							lessonContent={
+								"Concept: C# (pronounced C-sharp) is a programming language used to build apps like games, websites, and desktop programs.\n\n" +
+								"Example:\n// This is what C# code looks like\n\n" +
+								"Key Point: C# is general-purpose, so it can be used for many different types of apps.\n\n" +
+								'Mini task: Print "Welcome to ByteSize!"'
+							}
+							correctAnswer={'Console.WriteLine("Welcome to ByteSize!");'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

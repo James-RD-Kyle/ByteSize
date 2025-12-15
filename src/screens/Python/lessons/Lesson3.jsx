@@ -32,14 +32,19 @@ const PythonLesson3 = ({ navigation }) => {
 							Python Lesson 3
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Comments — Notes for humans (ignored by the computer)
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Comments"
+							lessonContent={
+								"Concept: Comments start with # and are ignored by Python.\n\n" +
+								"Example:\n# This is a comment\n\n" +
+								"Key Point: Comments explain what your code is doing.\n\n" +
+								"Mini task: Write a comment that says: This is Python"
+							}
+							correctAnswer={"# This is Python"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

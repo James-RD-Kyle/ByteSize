@@ -32,14 +32,19 @@ const JSLesson1 = ({ navigation }) => {
 							JavaScript Lesson 1
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							What Is JavaScript? — A quick intro to JavaScript
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="What Is JavaScript?"
+							lessonContent={
+								"Concept: JavaScript is used to make websites interactive, and it can also run on servers.\n\n" +
+								"Example:\n// This is what JavaScript looks like\n\n" +
+								"Key Point: JavaScript is everywhere on the web.\n\n" +
+								'Mini task: Log "Welcome to ByteSize!"'
+							}
+							correctAnswer={'console.log("Welcome to ByteSize!");'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

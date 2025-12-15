@@ -32,14 +32,19 @@ const JavaLesson7 = ({ navigation }) => {
 							Java Lesson 7
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							User Input (Intro) — Read text using Scanner
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="User Input (Intro)"
+							lessonContent={
+								"Concept: Java often uses Scanner to read input.\n\n" +
+								"Example:\nScanner sc = new Scanner(System.in);\nString name = sc.nextLine();\n\n" +
+								"Key Point: nextLine reads a full line of text.\n\n" +
+								"Mini task: Create a Scanner and read a line into name."
+							}
+							correctAnswer={"Scanner sc = new Scanner(System.in);\nString name = sc.nextLine();"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

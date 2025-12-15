@@ -32,14 +32,19 @@ const PythonLesson8 = ({ navigation }) => {
 							Python Lesson 8
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Input + Output — Ask a question, then respond
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Input + Output"
+							lessonContent={
+								"Concept: Programs ask for input and respond with output.\n\n" +
+								'Example:\nname = input("What is your name? ")\nprint("Hello " + name)\n\n' +
+								"Key Point: + joins strings.\n\n" +
+								'Mini task: Print "Hello " + name'
+							}
+							correctAnswer={'print("Hello " + name)'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

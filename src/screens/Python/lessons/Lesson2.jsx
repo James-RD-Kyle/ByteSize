@@ -32,14 +32,19 @@ const PythonLesson2 = ({ navigation }) => {
 							Python Lesson 2
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Your First Program — Printing text using print()
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Your First Program"
+							lessonContent={
+								"Concept: print() displays text.\n\n" +
+								'Example:\nprint("Hello, World!")\n\n' +
+								"Key Point: print() is the main way to show output.\n\n" +
+								'Mini task: Print exactly: "Hello, Python!"'
+							}
+							correctAnswer={'print("Hello, Python!")'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

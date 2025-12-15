@@ -32,14 +32,19 @@ const JavaLesson10 = ({ navigation }) => {
 							Java Lesson 10
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Else Statements — Handle the false case
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Else Statements"
+							lessonContent={
+								"Concept: else runs when the if condition is false.\n\n" +
+								'Example:\nif (age >= 18) {\n    System.out.println("Adult");\n} else {\n    System.out.println("Minor");\n}\n\n' +
+								"Key Point: if/else chooses between two paths.\n\n" +
+								'Mini task: Write the else block that prints "Minor".'
+							}
+							correctAnswer={'else {\n    System.out.println("Minor");\n}'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

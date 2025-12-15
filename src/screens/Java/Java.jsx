@@ -10,16 +10,16 @@ const Java = ({ navigation }) => {
 	const [completedLessons, setCompletedLessons] = useState([]);
 
 	const lessons = [
-		{ id: 1, title: 'Lesson Title 1', description: 'Description for lesson 1' },
-		{ id: 2, title: 'Lesson Title 2', description: 'Description for lesson 2' },
-		{ id: 3, title: 'Lesson Title 3', description: 'Description for lesson 3' },
-		{ id: 4, title: 'Lesson Title 4', description: 'Description for lesson 4' },
-		{ id: 5, title: 'Lesson Title 5', description: 'Description for lesson 5' },
-		{ id: 6, title: 'Lesson Title 6', description: 'Description for lesson 6' },
-		{ id: 7, title: 'Lesson Title 7', description: 'Description for lesson 7' },
-		{ id: 8, title: 'Lesson Title 8', description: 'Description for lesson 8' },
-		{ id: 9, title: 'Lesson Title 9', description: 'Description for lesson 9' },
-		{ id: 10, title: 'Lesson Title 10', description: 'Description for lesson 10' },
+		{ id: 1, title: "What Is Java?", description: "A quick intro to Java" },
+		{ id: 2, title: "Your First Program", description: "Printing text to the screen" },
+		{ id: 3, title: "Comments", description: "Notes for humans (ignored by the computer)" },
+		{ id: 4, title: "Variables", description: "Store values in code" },
+		{ id: 5, title: "Common Data Types", description: "int, String, boolean" },
+		{ id: 6, title: "Updating Variables", description: "Change variable values" },
+		{ id: 7, title: "User Input (Intro)", description: "Read text using Scanner" },
+		{ id: 8, title: "Input + Output", description: "Ask a question, then respond" },
+		{ id: 9, title: "If Statements", description: "Run code only when true" },
+		{ id: 10, title: "Else Statements", description: "Handle the false case" },
 	];
 
 	const handleLessonPress = (lessonId) => {

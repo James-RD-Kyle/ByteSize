@@ -32,14 +32,19 @@ const JSLesson7 = ({ navigation }) => {
 							JavaScript Lesson 7
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							User Input (Intro) — Input depends on environment
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="User Input (Intro)"
+							lessonContent={
+								"Concept: Input depends on where JavaScript runs (browser, Node, app).\n\n" +
+								"Example:\n// Browser input example: prompt('Name?')\n\n" +
+								"Key Point: For now we focus on output and logic.\n\n" +
+								'Mini task: Log "What is your name?"'
+							}
+							correctAnswer={'console.log("What is your name?");'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>
