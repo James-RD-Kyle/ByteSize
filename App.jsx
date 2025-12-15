@@ -9,6 +9,7 @@ import { StatusBar, useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { ProgressProvider } from './src/context/ProgressContext';
 import "./global.css"
 
 // Import screens
@@ -77,10 +78,11 @@ function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NavigationContainer>
-        <Stack.Navigator 
+    <ProgressProvider>
+      <SafeAreaProvider>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <NavigationContainer>
+          <Stack.Navigator 
           screenOptions={{
             headerShown: false, // Hide the default header
           }}
@@ -146,6 +148,7 @@ function App() {
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
+    </ProgressProvider>
   );
 }
 
