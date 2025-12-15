@@ -32,14 +32,19 @@ const JavaLesson2 = ({ navigation }) => {
 							Java Lesson 2
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Your First Program — Printing text to the screen
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Your First Program"
+							lessonContent={
+								"Concept: System.out.println prints text to the screen.\n\n" +
+								'Example:\nSystem.out.println("Hello, World!");\n\n' +
+								"Key Point: println prints text and moves to a new line.\n\n" +
+								'Mini task: Print exactly: "Hello, Java!"'
+							}
+							correctAnswer={'System.out.println("Hello, Java!");'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

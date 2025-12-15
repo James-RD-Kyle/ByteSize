@@ -32,14 +32,19 @@ const JavaLesson5 = ({ navigation }) => {
 							Java Lesson 5
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Common Data Types — int, String, boolean
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Common Data Types"
+							lessonContent={
+								"Concept: Types describe what kind of data you store.\n\n" +
+								'Example:\nint score = 100;\nString name = "James Kyle";\nboolean isOnline = true;\n\n' +
+								"Key Point: Choose the type that matches your data.\n\n" +
+								'Mini task: Create a String named name with value "James Kyle".'
+							}
+							correctAnswer={'String name = "James Kyle";'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>
