@@ -5,14 +5,16 @@ import Navigation from '../../../components/Navigation';
 import Logo from '../../../components/Logo';
 import LessonCard from '../../../components/LessonCard';
 import BackButton from '../../../components/BackButton';
+import { useProgress } from '../../../context/ProgressContext';
 
 const CSharpLesson6 = ({ navigation }) => {
 	const insets = useSafeAreaInsets();
+	const { markLessonComplete } = useProgress();
 	
 	const handleLessonComplete = (isCorrect) => {
 		if (isCorrect) {
+			markLessonComplete('csharp', 6);
 			console.log('C# Lesson 6 completed!');
-			// Navigate to next lesson or show completion message
 		}
 	};
 	

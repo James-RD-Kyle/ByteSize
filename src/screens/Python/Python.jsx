@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Navigation from '../../components/Navigation';
 import Logo from '../../components/Logo';
 import BackButton from '../../components/BackButton';
+import { useProgress } from '../../context/ProgressContext';
 
 const Python = ({ navigation }) => {
 	const insets = useSafeAreaInsets();
-	const [completedLessons, setCompletedLessons] = useState([]);
+	const { completedLessons } = useProgress();
+	const pythonCompletedLessons = completedLessons.python || [];
 
 	const lessons = [
 		{ id: 1, title: "What Is Python?", description: "A quick intro to Python" },
@@ -49,19 +51,19 @@ const Python = ({ navigation }) => {
 						{/* Progress Summary */}
 						<View className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
 							<Text className="text-lg font-semibold text-green-900 mb-1">
-								Progress: {completedLessons.length}/{lessons.length} Lessons
+								Progress: {pythonCompletedLessons.length}/{lessons.length} Lessons
 							</Text>
 							<View className="bg-gray-200 h-3 rounded-full overflow-hidden">
 								<View 
 									className="bg-green-600 h-full" 
-									style={{ width: `${(completedLessons.length / lessons.length) * 100}%` }}
+									style={{ width: `${(pythonCompletedLessons.length / lessons.length) * 100}%` }}
 								/>
 							</View>
 						</View>
 
-						{/* Lessons List */}
+						{/* Lessons List */
 						{lessons.map((lesson) => {
-							const isCompleted = completedLessons.includes(lesson.id);
+							const isCompleted = pythonCompletedLessons.includes(lesson.id);
 							return (
 								<TouchableOpacity
 									key={lesson.id}

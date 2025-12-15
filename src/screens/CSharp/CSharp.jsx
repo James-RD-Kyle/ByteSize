@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Navigation from '../../components/Navigation';
 import Logo from '../../components/Logo';
 import BackButton from '../../components/BackButton';
+import { useProgress } from '../../context/ProgressContext';
 
 const CSharp = ({ navigation }) => {
 	const insets = useSafeAreaInsets();
-	const [completedLessons, setCompletedLessons] = useState([]);
+	const { completedLessons } = useProgress();
+	const csharpCompletedLessons = completedLessons.csharp || [];
 
 	const lessons = [
 		{ id: 1, title: "What Is C#?", description: "A quick intro to the C# language" },
@@ -49,19 +51,19 @@ const CSharp = ({ navigation }) => {
 						{/* Progress Summary */}
 						<View className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
 							<Text className="text-lg font-semibold text-blue-900 mb-1">
-								Progress: {completedLessons.length}/{lessons.length} Lessons
+								Progress: {csharpCompletedLessons.length}/{lessons.length} Lessons
 							</Text>
 							<View className="bg-gray-200 h-3 rounded-full overflow-hidden">
 								<View 
 									className="bg-blue-600 h-full" 
-									style={{ width: `${(completedLessons.length / lessons.length) * 100}%` }}
+									style={{ width: `${(csharpCompletedLessons.length / lessons.length) * 100}%` }}
 								/>
 							</View>
 						</View>
 
 						{/* Lessons List */}
 						{lessons.map((lesson) => {
-							const isCompleted = completedLessons.includes(lesson.id);
+							const isCompleted = csharpCompletedLessons.includes(lesson.id);
 							return (
 								<TouchableOpacity
 									key={lesson.id}

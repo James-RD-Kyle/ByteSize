@@ -5,14 +5,16 @@ import Navigation from '../../../components/Navigation';
 import Logo from '../../../components/Logo';
 import LessonCard from '../../../components/LessonCard';
 import BackButton from '../../../components/BackButton';
+import { useProgress } from '../../../context/ProgressContext';
 
 const JavaLesson8 = ({ navigation }) => {
 	const insets = useSafeAreaInsets();
+	const { markLessonComplete } = useProgress();
 	
 	const handleLessonComplete = (isCorrect) => {
 		if (isCorrect) {
+			markLessonComplete('java', 8);
 			console.log('Java Lesson 8 completed!');
-			// Navigate to next lesson or show completion message
 		}
 	};
 	

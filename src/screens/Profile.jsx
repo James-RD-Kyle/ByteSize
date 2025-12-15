@@ -190,15 +190,6 @@ function Profile({ navigation }) {
               ))}
             </View>
 
-            {/* Logout Button */}
-            <View className="mb-6">
-              <TouchableOpacity 
-                className="bg-white border border-red-300 rounded-lg p-4"
-                onPress={() => {/* Logout functionality - Login screen to be added */}}
-              >
-                <Text className="text-center text-base text-red-600">Logout</Text>
-              </TouchableOpacity>
-            </View>
           </View>
 
           {/* Footer */}
