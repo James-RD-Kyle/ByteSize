@@ -32,14 +32,19 @@ const PythonLesson1 = ({ navigation }) => {
 							Python Lesson 1
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							What Is Python? — A quick intro to Python
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="What Is Python?"
+							lessonContent={
+								"Concept: Python is a popular language used for web apps, automation, and data.\n\n" +
+								"Example:\n# This is what Python code looks like\n\n" +
+								"Key Point: Python is known for being readable and beginner-friendly.\n\n" +
+								'Mini task: Print "Welcome to ByteSize!"'
+							}
+							correctAnswer={'print("Welcome to ByteSize!")'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

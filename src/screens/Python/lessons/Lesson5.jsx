@@ -32,14 +32,19 @@ const PythonLesson5 = ({ navigation }) => {
 							Python Lesson 5
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Common Data Types — int, str, bool
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Common Data Types"
+							lessonContent={
+								"Concept: Different types store different kinds of values.\n\n" +
+								'Example:\nscore = 100\nname = "James Kyle"\nis_online = True\n\n' +
+								"Key Point: In Python you usually don’t write types for basic variables.\n\n" +
+								'Mini task: Create a variable name with value "James Kyle".'
+							}
+							correctAnswer={'name = "James Kyle"'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

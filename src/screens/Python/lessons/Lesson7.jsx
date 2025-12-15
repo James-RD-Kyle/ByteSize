@@ -32,14 +32,19 @@ const PythonLesson7 = ({ navigation }) => {
 							Python Lesson 7
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							User Input — Read text using input()
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="User Input"
+							lessonContent={
+								"Concept: input() reads text typed by the user.\n\n" +
+								"Example:\nname = input()\n\n" +
+								"Key Point: input() returns a string.\n\n" +
+								"Mini task: Read input into a variable called name."
+							}
+							correctAnswer={"name = input()"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>
