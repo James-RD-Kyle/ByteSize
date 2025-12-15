@@ -40,7 +40,7 @@ const CSharpLesson5 = ({ navigation }) => {
 							title="Common Data Types"
 							lessonContent={
 								"Concept: Different data types store different kinds of values.\n\n" +
-								'Example:\nint score = 100;\nstring name = "Hannah";\nbool isOnline = true;\n\n' +
+								'Example:\nint score = 100;\nstring name = "James Kyle";\nbool isOnline = true;\n\n' +
 								"Key Point: Use the type that matches your data.\n\n" +
 								'Mini task: Create a string named name with value "James Kyle".'
 							}

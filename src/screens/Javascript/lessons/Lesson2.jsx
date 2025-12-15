@@ -32,14 +32,19 @@ const JSLesson2 = ({ navigation }) => {
 							JavaScript Lesson 2
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Your First Program — Printing with console.log
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Your First Program"
+							lessonContent={
+								"Concept: console.log prints text to the console.\n\n" +
+								'Example:\nconsole.log("Hello, World!");\n\n' +
+								"Key Point: console.log helps you see what your code is doing.\n\n" +
+								'Mini task: Print exactly: "Hello, JavaScript!"'
+							}
+							correctAnswer={'console.log("Hello, JavaScript!");'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

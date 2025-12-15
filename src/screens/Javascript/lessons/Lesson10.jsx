@@ -32,14 +32,19 @@ const JSLesson10 = ({ navigation }) => {
 							JavaScript Lesson 10
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							For Loops — Repeat code a set number of times
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="For Loops"
+							lessonContent={
+								"Concept: A for loop repeats code a set number of times.\n\n" +
+								"Example:\nfor (let i = 0; i < 3; i++) {\n  console.log(i);\n}\n\n" +
+								"Key Point: for loops have start, condition, and update.\n\n" +
+								"Mini task: Write a for loop that prints i from 0 to 2."
+							}
+							correctAnswer={"for (let i = 0; i < 3; i++) {\n  console.log(i);\n}"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

@@ -32,14 +32,19 @@ const JSLesson4 = ({ navigation }) => {
 							JavaScript Lesson 4
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Variables — Store values using let/const
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Variables"
+							lessonContent={
+								"Concept: Variables store values so you can use them later.\n\n" +
+								"Example:\nlet age = 20;\n\n" +
+								"Key Point: let creates a variable you can change.\n\n" +
+								"Mini task: Create a variable score with value 100."
+							}
+							correctAnswer={"let score = 100;"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

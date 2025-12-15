@@ -32,14 +32,19 @@ const JSLesson8 = ({ navigation }) => {
 							JavaScript Lesson 8
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							If Statements — Run code only when true
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="If Statements"
+							lessonContent={
+								"Concept: if runs code only when a condition is true.\n\n" +
+								'Example:\nif (age >= 18) {\n  console.log("Adult");\n}\n\n' +
+								"Key Point: Conditions evaluate to true or false.\n\n" +
+								'Mini task: Write an if that prints "Adult" if age >= 18.'
+							}
+							correctAnswer={'if (age >= 18) {\n  console.log("Adult");\n}'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>
