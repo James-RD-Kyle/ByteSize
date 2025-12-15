@@ -32,14 +32,19 @@ const CSharpLesson7 = ({ navigation }) => {
 							C# Lesson 7
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							User Input — Read text using Console.ReadLine
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="User Input"
+							lessonContent={
+								"Concept: Console.ReadLine reads a line of text typed by the user.\n\n" +
+								"Example:\nstring name = Console.ReadLine();\n\n" +
+								"Key Point: ReadLine returns a string (text).\n\n" +
+								"Mini task: Read input into a variable called name."
+							}
+							correctAnswer={"string name = Console.ReadLine();"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

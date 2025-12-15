@@ -32,14 +32,19 @@ const CSharpLesson6 = ({ navigation }) => {
 							C# Lesson 6
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Updating Variables — Change variable values
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Updating Variables"
+							lessonContent={
+								"Concept: You can change a variable’s value by assigning a new value.\n\n" +
+								"Example:\nscore = score + 1;\n\n" +
+								"Key Point: The right side is calculated first, then stored.\n\n" +
+								"Mini task: Increase score by 1."
+							}
+							correctAnswer={"score = score + 1;"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

@@ -32,14 +32,19 @@ const CSharpLesson4 = ({ navigation }) => {
 							C# Lesson 4
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Variables — Store values in code
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Variables"
+							lessonContent={
+								"Concept: A variable stores a value so you can use it later.\n\n" +
+								"Example:\nint age = 20;\n\n" +
+								"Key Point: A variable has a type, a name, and a value.\n\n" +
+								"Mini task: Create an int named score with value 100."
+							}
+							correctAnswer={"int score = 100;"}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

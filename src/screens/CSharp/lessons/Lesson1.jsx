@@ -32,7 +32,7 @@ const CSharpLesson1 = ({ navigation }) => {
 							C# Lesson 1
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							What Is C#? — A quick intro to the C# language
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}

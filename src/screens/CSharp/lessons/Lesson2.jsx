@@ -32,14 +32,19 @@ const CSharpLesson2 = ({ navigation }) => {
 							C# Lesson 2
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Your First Program — Printing text to the screen
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Your First Program"
+							lessonContent={
+								"Concept: Console.WriteLine prints text to the screen (the console).\n\n" +
+								'Example:\nConsole.WriteLine("Hello, World!");\n\n' +
+								"Key Point: Use Console.WriteLine whenever you want to show output.\n\n" +
+								'Mini task: Print exactly: "Hello, C#!"'
+							}
+							correctAnswer={'Console.WriteLine("Hello, C#!");'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>

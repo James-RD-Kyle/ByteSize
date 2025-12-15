@@ -32,14 +32,19 @@ const CSharpLesson5 = ({ navigation }) => {
 							C# Lesson 5
 						</Text>
 						<Text className="text-sm text-gray-500 mb-6" style={{ lineHeight: 20 }}>
-							Insert lesson topic here
+							Common Data Types — int, string, bool
 						</Text>
 
 						{/* Lesson Content - Replace with actual lesson */}
 						<LessonCard 
-							title="Lesson Title"
-							lessonContent="Insert lesson content here. Describe the concept and what the student needs to do."
-							correctAnswer="INSERT_CORRECT_ANSWER_HERE"
+							title="Common Data Types"
+							lessonContent={
+								"Concept: Different data types store different kinds of values.\n\n" +
+								'Example:\nint score = 100;\nstring name = "Hannah";\nbool isOnline = true;\n\n' +
+								"Key Point: Use the type that matches your data.\n\n" +
+								'Mini task: Create a string named name with value "James Kyle".'
+							}
+							correctAnswer={'string name = "James Kyle";'}
 							onComplete={handleLessonComplete}
 						/>
 					</View>
