@@ -61,7 +61,7 @@ const Python = ({ navigation }) => {
 							</View>
 						</View>
 
-						{/* Lessons List */
+						{/* Lessons List */ }
 						{lessons.map((lesson) => {
 							const isCompleted = pythonCompletedLessons.includes(lesson.id);
 							return (
