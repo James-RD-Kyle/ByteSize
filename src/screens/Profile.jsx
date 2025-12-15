@@ -9,9 +9,11 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
+import { useProgress } from '../context/ProgressContext';
 
 function Profile({ navigation }) {
   const insets = useSafeAreaInsets();
+  const { completedLessons } = useProgress();
   
   // Profile state - ready for actual user data
   const [profile, setProfile] = useState({
@@ -24,12 +26,12 @@ function Profile({ navigation }) {
 
   const [isEditing, setIsEditing] = useState(false);
 
-  // Statistics by language - ready for actual completion data
+  // Statistics by language - using actual completion data
   const languageStats = [
-    { language: 'C#', completed: 0, total: 10, color: '#2563eb' },
-    { language: 'JavaScript', completed: 0, total: 10, color: '#ca8a04' },
-    { language: 'Python', completed: 0, total: 10, color: '#16a34a' },
-    { language: 'Java', completed: 0, total: 10, color: '#dc2626' },
+    { language: 'C#', completed: (completedLessons.csharp || []).length, total: 10, color: '#2563eb' },
+    { language: 'JavaScript', completed: (completedLessons.javascript || []).length, total: 10, color: '#ca8a04' },
+    { language: 'Python', completed: (completedLessons.python || []).length, total: 10, color: '#16a34a' },
+    { language: 'Java', completed: (completedLessons.java || []).length, total: 10, color: '#dc2626' },
   ];
   
   return (

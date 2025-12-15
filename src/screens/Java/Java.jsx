@@ -61,7 +61,7 @@ const Java = ({ navigation }) => {
 							</View>
 						</View>
 
-						{/* Lessons List */
+						{/* Lessons List */}
 						{lessons.map((lesson) => {
 							const isCompleted = javaCompletedLessons.includes(lesson.id);
 							return (
